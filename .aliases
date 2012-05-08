@@ -33,6 +33,8 @@ alias whois="whois -h whois-servers.net"
 # Git Shortcuts
 alias g="git"
 alias st="git status"
+alias branch="git branch"
+alias branches="git branch"
 alias pull="git pull"
 alias push="git push"
 alias co="git commit -av"
