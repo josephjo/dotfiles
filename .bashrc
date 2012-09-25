@@ -38,12 +38,16 @@ alias wireless="ipconfig getifaddr en1"
 
 
 # Hide/show files
-alias hide='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder'
-alias show='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder'
+alias hide='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder && echo Hiding invisible files'
+alias show='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder && echo Showing invisible files'
 
 
 # Super WHOIS
 alias whois="whois -h whois-servers.net"
+
+
+# Delete pyc files
+alias pyc="find -L . -name '*.pyc' -delete"
 
 
 # Git Shortcuts
@@ -55,8 +59,8 @@ alias diff="git diff"
 alias fetch="git fetch"
 alias pull="git pull"
 alias push="git push"
-alias stash="git stash apply"
-alias pop="git stash pop"
+alias stash="echo git stash apply && git stash apply"
+alias pop="echo git stash pop && git stash pop"
 alias co="git commit -av"
 alias master="git checkout master && st"
 alias log="git log --pretty=format:'%Cred%h%Creset %C(yellow)| %an | %Cgreen%cr |%Creset %s%C(yellow)%d' --stat"
