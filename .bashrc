@@ -2,6 +2,15 @@
 source ~/.private
 
 
+# dot the cds
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias .......="cd ../../../../../.."
+
+
 # Set Sublime Text 2 as default editor
 export EDITOR='subl -w'
 
