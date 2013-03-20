@@ -51,6 +51,10 @@ alias hide='defaults write com.apple.Finder AppleShowAllFiles NO && killall Find
 alias show='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder && echo Showing invisible files'
 
 
+# Refresh IP
+alias refresh="sudo dhclient"
+
+
 # Super WHOIS
 alias whois="whois -h whois-servers.net"
 
