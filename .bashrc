@@ -78,6 +78,13 @@ alias re="git fetch && git rebase -i origin/master"
 alias clean="git clean -fdx"
 
 
+# Sleep computer after x
+function sleeptimer {
+    time=$1
+    sleep ${time} && osascript -e 'tell application "System Events" to sleep'
+}
+
+
 # Add pwd to prompt and add current branch in Git
 function find_git_branch {
     local dir=. head
@@ -85,7 +92,7 @@ function find_git_branch {
         if [ -f "$dir/.git/HEAD" ]; then
             head=$(< "$dir/.git/HEAD")
             if [[ $head == ref:\ refs/heads/* ]]; then
-                git_branch=" ${head#*/*/}"
+                git_branch=" (${head#*/*/})"
             elif [[ $head != '' ]]; then
                 git_branch=' (detached)'
             else
@@ -101,7 +108,7 @@ function find_git_branch {
 PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
 
 yellow=$'\e[0;33m'
-red=$'\e[0;31m'
-normal_colours=$'\e[m'
+red=$'\e[0;91m'
+default=$'\e[m'
 
-PS1="\[$normal_colours\]\u@\h | \[$yellow\]\w\[$red\]\$git_branch\[$yellow\] |\[$normal_colours\] "
+PS1="\[$default\]\u » \[$yellow\]\w\[$red\]\$git_branch\[$default\] »\[$default\] "
