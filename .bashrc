@@ -29,11 +29,21 @@ alias o="open ."
 
 
 # Super ls: all, long, append / for directories, add size, color
-alias ls="ls -alpsG"
+alias ls="ls -alps"
 
 
 # Super ls, but sort by reverse modification time
-alias lsd="ls -alrstG"
+alias lsd="ls -alrst"
+
+
+# Create parent directories on demand
+alias mkdir='mkdir -pv'
+
+
+# Ask before overwriting files and make verbose
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias ln='ln -iv'
 
 
 # Replicate Tree
@@ -47,8 +57,8 @@ alias wireless="ipconfig getifaddr en1"
 
 
 # Hide/show files
-alias hide='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder && echo Hiding invisible files'
-alias show='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder && echo Showing invisible files'
+alias hide='defaults write com.apple.Finder AppleShowAllFiles FALSE && killall Finder && echo Hiding invisible files'
+alias show='defaults write com.apple.Finder AppleShowAllFiles TRUE && killall Finder && echo Showing invisible files'
 
 
 # Refresh IP
