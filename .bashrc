@@ -61,7 +61,7 @@ alias hide='defaults write com.apple.Finder AppleShowAllFiles FALSE && killall F
 alias show='defaults write com.apple.Finder AppleShowAllFiles TRUE && killall Finder && echo Showing invisible files'
 
 
-# Refresh IP
+# Refresh IP for Linux VirtualBox
 alias refresh="sudo dhclient"
 
 
