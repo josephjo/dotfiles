@@ -3,6 +3,9 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
+# Load private files
+source ~/.private
+
 # Autocorrect typos in path names when using "cd"
 shopt -s cdspell
 
