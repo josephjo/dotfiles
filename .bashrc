@@ -88,6 +88,13 @@ alias re="git fetch && git rebase -i origin/master"
 alias clean="git clean -fdx"
 
 
+# git checkout and push new branch
+function checkout() {
+    git checkout -b $1; git push -u origin $1
+    echo 'Created new branch' $1 'and pushed to origin'
+}
+
+
 # Sleep computer after x
 function sleeptimer {
     time=$1
