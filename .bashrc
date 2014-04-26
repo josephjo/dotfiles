@@ -121,4 +121,4 @@ yellow=$'\e[0;33m'
 red=$'\e[0;91m'
 default=$'\e[m'
 
-PS1="\[$default\]\u » \[$yellow\]\w\[$red\]\$git_branch\[$default\] »\[$default\] "
+PS1="\[$default\]\u@\h » \[$yellow\]\w\[$red\]\$git_branch\[$default\] »\[$default\] "
