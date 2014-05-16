@@ -24,8 +24,8 @@ alias s="subl"
 alias o="open ."
 
 
-# Super ls: all, long, append / for directories, add size, color
-alias ls="ls -alps"
+# Super ls: all, long, append / for directories, add size
+alias l="ls -alp"
 
 
 # Super ls, but sort by reverse modification time
