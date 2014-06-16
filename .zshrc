@@ -119,6 +119,10 @@ alias whois="whois -h whois-servers.net"
 alias pyc="find -L . -name '*.pyc' -delete"
 
 
+# Paste clipboard to dpaste
+alias dpaste='pbpaste | curl -si -F "poster=anon" -F "expiry_days=287" -F "content=<-" http://dpaste.com/api/v2/ | grep ^Location: | colrm 1 10 | tr -d "\r" | xargs open'
+
+
 # Git Shortcuts
 alias g="git"
 alias st="git status"
