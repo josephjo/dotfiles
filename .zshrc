@@ -128,7 +128,6 @@ alias diff="git diff"
 alias fetch="git fetch"
 alias pull="git pull"
 alias push="git push"
-alias ch="git checkout $1 && st"
 alias stash="echo git stash apply && git stash apply"
 alias pop="echo git stash pop && git stash pop"
 alias co="git commit -av"
@@ -137,6 +136,12 @@ alias log="git log --decorate --graph --pretty=format:'%C(red bold) %h %C(yellow
 alias res="git reset --hard HEAD"
 alias re="git fetch && git rebase -i origin/master"
 alias clean="git clean -fdx"
+
+
+# git checkout existing branch
+function ch() {
+    git checkout $1
+}
 
 
 # git checkout and push new branch
