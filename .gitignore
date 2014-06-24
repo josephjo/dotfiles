@@ -1,1 +1,17 @@
+*.egg-info
+*.pyc
+*.swo
+*.swp
+*~
+._*
 .DS_Store
+.grunt
+.Spotlight-V100
+.Trashes
+_SpecRunner.html
+bower
+bower_components
+Icon?
+node_modules
+npm-debug.log
+Thumbs.db
