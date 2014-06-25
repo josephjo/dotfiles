@@ -1,59 +1,69 @@
-filetype off
+" .vimrc
 
+" First
+execute pathogen#infect()
 filetype plugin indent on
-
+set modelines=0
 set nocompatible
 
-set modelines=0
+" Map leader
+let mapleader = ","
+let g:mapleader = ","
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set encoding=utf-8
-set scrolloff=3
+" Basics
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
 set autoindent
-set showmode
-set showcmd
+set backspace=indent,eol,start
+set cursorline
+set encoding=utf-8
+set formatoptions=qrn1
 set hidden
+set history=500
+set laststatus=2
+set number
+set ruler
+set scrolloff=999
+set showcmd
+set showmode
+set t_Co=256 " Use 256 colors
+set ttyfast
+set undolevels=1000
+set visualbell
 set wildmenu
 set wildmode=list:longest
-set visualbell
-set cursorline
-set ttyfast
-set ruler
-set backspace=indent,eol,start
-set laststatus=2
-set relativenumber
-set undofile
-let mapleader = ","
+set wrap
+syntax enable
+
+" Tabs
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+" Search
 nnoremap / /\v
 vnoremap / /\v
-set ignorecase
-set smartcase
 set gdefault
+set hlsearch
+set ignorecase
 set incsearch
 set showmatch
-set hlsearch
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
-set wrap
-set formatoptions=qrn1
-set list
-set listchars=tab:▸\ ,eol:¬
+set smartcase
 
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
+" Backup
+set backup
+set backupdir=~/.vimbk/
+
+" Persistent undo
+set undofile
+set undodir=~/.vimundo/
+
+" Spell check
+set spl=en spell
+map <leader>sp :setlocal spell!<cr>
+
+" Misc
 nnoremap ; :
-
 au FocusLost * :wa
-nnoremap <leader>ft Vatzf
-nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-nnoremap <leader>w <C-w>v<C-w>l
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" au BufNewFile,BufRead *.html set filetype=htmldjango
+au BufRead,BufNewFile *.less set filetype=css
