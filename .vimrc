@@ -2,6 +2,7 @@
 
 " First
 execute pathogen#infect()
+
 filetype plugin indent on
 set modelines=0
 set nocompatible
@@ -58,12 +59,9 @@ set backupdir=~/.vimbk/
 set undofile
 set undodir=~/.vimundo/
 
-" Spell check
-set spl=en spell
-map <leader>sp :setlocal spell!<cr>
-
 " Misc
 nnoremap ; :
 au FocusLost * :wa
 " au BufNewFile,BufRead *.html set filetype=htmldjango
 au BufRead,BufNewFile *.less set filetype=css
+map <F6> :setlocal spell! spell? spelllang=en_us<cr> " Spell check
