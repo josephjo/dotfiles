@@ -1,4 +1,3 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -136,7 +135,7 @@ alias stash="echo git stash apply && git stash apply"
 alias pop="echo git stash pop && git stash pop"
 alias co="git commit -av"
 alias master="git checkout master"
-alias log="git log --decorate --graph --pretty=format:'%C(red bold) %h %C(yellow bold) | %an | %Cgreen%cr | %Creset %s %C(blue bold) %d' --stat"
+alias log="git log --decorate --graph --pretty=format:'%C(red bold) %h %C(yellow bold) | %an | %Cgreena: %ar / c: %cr | %Creset %s %C(blue bold) %d' --stat"
 alias res="git reset --hard HEAD"
 alias re="git fetch && git rebase -i origin/master"
 alias clean="git clean -fdx"
@@ -160,3 +159,4 @@ function sleeptimer {
     time=$1
     sleep ${time} && osascript -e 'tell application "System Events" to sleep'
 }
+
