@@ -64,11 +64,11 @@ export MANPAGER="less -X"
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 
-# Set Sublime Text 2 as default editor
+# Set Sublime Text 3 as default editor
 export EDITOR='subl -w'
 
 
-# Shortcut for Sublime Text 2
+# Shortcut for Sublime Text 3
 alias s="subl"
 alias o="open ."
 
