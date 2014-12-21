@@ -1,3 +1,4 @@
+# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -45,7 +46,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Users/jjo/.gem/ruby/1.8/bin:/Users/jjo/bin:/usr/local/bin/git:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
+export PATH=$PATH
 
 # dot the cds
 alias ..="cd .."
@@ -159,4 +160,3 @@ function sleeptimer {
     time=$1
     sleep ${time} && osascript -e 'tell application "System Events" to sleep'
 }
-
