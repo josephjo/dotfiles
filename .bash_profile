@@ -3,6 +3,11 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
+# Load git-completion
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
+
 # Load private files
 source ~/.private
 
