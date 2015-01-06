@@ -1,8 +1,6 @@
 " .vimrc
 
 " First
-execute pathogen#infect()
-
 filetype plugin indent on
 set modelines=0
 set nocompatible
@@ -50,10 +48,6 @@ set ignorecase
 set incsearch
 set showmatch
 set smartcase
-
-" Backup
-set backup
-set backupdir=~/.vimbk/
 
 " Persistent undo
 set undofile
