@@ -42,6 +42,10 @@ alias cp='cp -iv'
 alias ln='ln -iv'
 
 
+# Pretty print the path
+alias path="echo $PATH | tr -s ':' '\n'"
+
+
 # Replicate Tree
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
