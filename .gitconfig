@@ -1,0 +1,15 @@
+[user]
+	name = Joseph Jo
+	email = joseph@josephjo.com
+[fetch]
+    prune = true
+[help]
+	autocorrect = 5
+[merge]
+    ff = only
+[pull]
+	rebase = true
+[push]
+	default = current
+[color]
+    ui = auto
