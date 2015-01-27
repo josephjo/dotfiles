@@ -115,6 +115,12 @@ function ch() {
 }
 
 
+# git checkout existing branch
+function checkout() {
+    git checkout $1
+}
+
+
 # git checkout and push new branch
 function chpush() {
     git checkout -b $1; git push -u origin $1
