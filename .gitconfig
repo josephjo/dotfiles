@@ -1,15 +1,17 @@
 [user]
-	name = Joseph Jo
-	email = joseph@josephjo.com
+    name = Joseph Jo
+    email = joseph@josephjo.com
 [fetch]
     prune = true
 [help]
-	autocorrect = 5
+    autocorrect = 5
 [merge]
     ff = only
 [pull]
-	rebase = true
+    rebase = true
 [push]
-	default = current
+    default = current
 [color]
     ui = auto
+[core]
+    excludesfile = /Users/jjo/.gitignore
