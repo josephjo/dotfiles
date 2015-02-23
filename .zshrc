@@ -63,6 +63,10 @@ alias ln='ln -iv'
 alias path="echo $PATH | tr -s ':' '\n'"
 
 
+# Open the /etc/hosts file
+alias hosts="open /etc/hosts"
+
+
 # Replicate Tree
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
