@@ -36,8 +36,12 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 export EDITOR='subl -w'
 
 
-# Shortcut for Sublime Text 3
+# Shortcut for editors
 alias s="subl"
+alias a="atom"
+
+
+# Shortcut to open with default app
 alias o="open ."
 
 
