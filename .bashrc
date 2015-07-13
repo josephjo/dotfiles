@@ -126,6 +126,12 @@ function sleeptimer {
 }
 
 
+# Search for files
+function search() {
+    find . -iname "*$@*" | less;
+}
+
+
 # Add pwd to prompt and add current branch in Git
 function find_git_branch {
     local dir=. head
