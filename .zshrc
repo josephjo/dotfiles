@@ -98,6 +98,10 @@ alias whois="whois -h whois-servers.net"
 alias pyc="find -L . -name '*.pyc' -delete"
 
 
+# Start a quick server
+alias serve='python -m SimpleHTTPServer 8000'
+
+
 # Git Shortcuts
 alias g="git"
 alias st="git status"
