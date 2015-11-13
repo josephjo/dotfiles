@@ -121,6 +121,11 @@ alias re="git fetch && git rebase -i origin/master"
 alias clean="git clean -fdx"
 
 
+# git revert hash
+function revert() {
+    git revert -m 1 $1
+}
+
 # git checkout existing branch
 function ch() {
     git checkout $1
