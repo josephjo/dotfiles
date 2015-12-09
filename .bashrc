@@ -137,6 +137,12 @@ function search() {
 }
 
 
+# Search history
+function hist() {
+    history | grep $1
+}
+
+
 # Add pwd to prompt and add current branch in Git
 function find_git_branch {
     local dir=. head
@@ -164,3 +170,6 @@ red=$'\e[0;91m'
 default=$'\e[m'
 
 PS1="\[$default\]\u@\h » \[$yellow\]\w\[$red\]\$git_branch\[$default\] »\[$default\] "
+
+export NVM_DIR="/Users/jjo/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

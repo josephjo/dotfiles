@@ -15,6 +15,10 @@ source $ZSH/oh-my-zsh.sh
 source ~/.private
 
 
+# nvm
+source ~/.nvm/nvm.sh
+
+
 # dot the cds
 alias ..="cd .."
 alias ...="cd ../.."
@@ -158,9 +162,17 @@ function search() {
 }
 
 
+# Search history
+function hist() {
+    history | grep $1
+}
+
+
 # Prompt
 PROMPT='%n@ %{$fg_bold[red]%}»%{$fg_bold[green]%}%p %{$fg[yellow]%}${PWD/#$HOME/~} %{$fg_bold[red]%}$(git_prompt_info)%{$fg_bold[red]%} % %{$reset_color%}'
 ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[red]%})"
+
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
