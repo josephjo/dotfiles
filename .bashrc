@@ -98,6 +98,7 @@ alias log="git log --decorate --graph --pretty=format:'%C(red bold) %h %C(yellow
 alias res="git reset --hard HEAD"
 alias re="git fetch && git rebase -i origin/master"
 alias clean="git clean -fdx"
+alias undo="git reset --soft HEAD~"
 
 
 # git revert hash

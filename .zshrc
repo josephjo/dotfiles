@@ -15,10 +15,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/.private
 
 
-# nvm
-source ~/.nvm/nvm.sh
-
-
 # dot the cds
 alias ..="cd .."
 alias ...="cd ../.."
@@ -123,6 +119,7 @@ alias log="git log --decorate --graph --pretty=format:'%C(red bold) %h %C(yellow
 alias res="git reset --hard HEAD"
 alias re="git fetch && git rebase -i origin/master"
 alias clean="git clean -fdx"
+alias undo="git reset --soft HEAD~"
 
 
 # git revert hash
@@ -174,5 +171,3 @@ ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[red]%})"
-
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
