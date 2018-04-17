@@ -132,6 +132,12 @@ function sleeptimer {
 }
 
 
+# Flush DNS cache
+function flush {
+    sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; echo "Cache flushed"
+}
+
+
 # Search for files
 function search() {
     find . -iname "*$@*" | less;
@@ -172,5 +178,3 @@ default=$'\e[m'
 
 PS1="\[$default\]\u@\h » \[$yellow\]\w\[$red\]\$git_branch\[$default\] »\[$default\] "
 
-export NVM_DIR="/Users/jjo/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

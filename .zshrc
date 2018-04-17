@@ -34,6 +34,7 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 # Set Sublime Text 3 as default editor
 export EDITOR='subl -w'
+# export EDITOR='atom -w'
 
 
 # Shortcut for editors
@@ -153,6 +154,12 @@ function sleeptimer {
 }
 
 
+# Flush DNS cache
+function flush {
+    sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; echo "Cache flushed"
+}
+
+
 # Search for files
 function search() {
     find . -iname "*$@*" | less;
@@ -171,3 +178,8 @@ ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[red]%})"
+eval $(/usr/libexec/path_helper -s)
+
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export JAVA_HOME=/Library/Java/Home
