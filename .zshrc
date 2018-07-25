@@ -100,7 +100,9 @@ alias pyc="find -L . -name '*.pyc' -delete"
 
 
 # Start a quick server
-alias serve='python -m SimpleHTTPServer 8000'
+function serve() {
+    python -m SimpleHTTPServer ${1:-8000}
+}
 
 
 # Git Shortcuts
