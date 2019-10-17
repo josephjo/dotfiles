@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 plugins=(git)
 
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jjo/Library/Python/2.7/bin"
 
 
 source $ZSH/oh-my-zsh.sh
@@ -123,6 +123,7 @@ alias res="git reset --hard HEAD"
 alias re="git fetch && git rebase -i origin/master"
 alias clean="git clean -fdx"
 alias undo="git reset --soft HEAD~"
+alias amend="git commit --amend"
 
 
 # git revert hash
@@ -146,6 +147,18 @@ function checkout() {
 function chpush() {
     git checkout -b $1; git push -u origin $1
     echo 'Created new branch' $1 'and pushed to origin'
+}
+
+
+# Delete branch on server
+function del() {
+    git push origin :$1
+}
+
+
+# Make a empty commit
+function emptycommit() {
+    git commit --allow-empty -m "$1"
 }
 
 
@@ -185,3 +198,4 @@ eval $(/usr/libexec/path_helper -s)
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export JAVA_HOME=/Library/Java/Home
+
