@@ -32,14 +32,12 @@ export MANPAGER="less -X"
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 
-# Set Sublime Text 3 as default editor
+# Set Sublime Text as default editor
 export EDITOR='subl -w'
-# export EDITOR='atom -w'
 
 
 # Shortcut for editors
 alias s="subl"
-alias a="atom"
 
 
 # Shortcut to open with default app
@@ -85,10 +83,6 @@ alias wireless="ipconfig getifaddr en1"
 # Hide/show files
 alias hide='defaults write com.apple.Finder AppleShowAllFiles FALSE && killall Finder && echo Hiding invisible files'
 alias show='defaults write com.apple.Finder AppleShowAllFiles TRUE && killall Finder && echo Showing invisible files'
-
-
-# Refresh IP for Linux VirtualBox
-alias refresh="sudo dhclient"
 
 
 # Super WHOIS
@@ -194,8 +188,3 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[red]%})"
 eval $(/usr/libexec/path_helper -s)
-
-
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export JAVA_HOME=/Library/Java/Home
-
