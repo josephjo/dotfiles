@@ -1,6 +1,5 @@
 [user]
     name = Joseph Jo
-    email = joseph@josephjo.com
 [fetch]
     prune = true
 [help]
